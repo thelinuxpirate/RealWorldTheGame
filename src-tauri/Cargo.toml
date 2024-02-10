@@ -1,0 +1,21 @@
+[package]
+name = "rwg"
+version = "0.0.8"
+description = "Create NFTs, pay off debt, survive!"
+authors = ["TheLinuxPirate"]
+default-run = "rwg"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5.1", features = [] }
+
+[dependencies]
+serde_json = "1.0.107"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.5.4", features = ["cli"] }
+clap = { version = "4.5.0", features = ["derive"] }
+rand = "0.8.5"
+prettytable-rs = "0.10.0"
+
+[features]
+custom-protocol = [ "tauri/custom-protocol" ]
